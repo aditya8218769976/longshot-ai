@@ -1,0 +1,121 @@
+.door-left {
+  background-color: rgb(17, 19, 18);
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  left: 0;
+
+  border: 5px solid rgb(185, 244, 239);
+  color: azure;
+}
+
+.door-left-animation {
+  animation: door-left-animation 3s infinite;
+}
+
+@keyframes door-left-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: -50%;
+  }
+}
+
+.door-right {
+  background-color: rgb(17, 19, 18);
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  right: 0;
+  border: 5px solid rgb(185, 244, 239);
+}
+
+.door-right-animation {
+  animation: door-right-animation 3s;
+}
+
+@keyframes door-right-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: -50%;
+  }
+}
+
+@keyframes rotate-style {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* middle part style starts here */
+
+.door-middle-container {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.door-middle {
+  display: flex;
+  left: 38.5%;
+  width: 21rem;
+  border-radius: 50%;
+  background: aqua;
+  height: 21rem;
+  position: absolute;
+  top: 25%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid red;
+
+  z-index: 10;
+}
+.rotate-style {
+  animation: rotate-style 3s;
+  transition-duration: 5s;
+}
+
+.door-middle-form {
+  display: grid;
+  margin-bottom: 1rem;
+}
+
+.error-msg {
+  font-size: 12px;
+  width: 100%;
+  color: red;
+}
+
+.success-msg {
+  width: 100%;
+  background-color: #0f824d;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.login-btn {
+  background-color: #0f824d;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  width: 5rem;
+  height: 32px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
