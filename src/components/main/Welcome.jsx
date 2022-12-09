@@ -7,8 +7,6 @@ const Welcome = () => {
   const [logout, setLogout] = useState("");
   const navigate = useNavigate();
 
-  const abc = window.localStorage.getItem("minutes", "seconds");
-
   const logOutHandler = () => {
     setLogout(window.localStorage.setItem("logout", true));
 
@@ -18,12 +16,10 @@ const Welcome = () => {
     <div className="main-style">
       <Timer />
       <div className="link-style">
-        {!logout && abc ? (
+        {!logout && (
           <button type="submit" onClick={logOutHandler}>
             LogOut
           </button>
-        ) : (
-          <div></div>
         )}
       </div>
     </div>
